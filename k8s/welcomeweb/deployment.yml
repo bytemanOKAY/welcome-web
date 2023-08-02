@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: welcome-web-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: welcome-web-app
+  template:
+    metadata:
+      labels:
+        app: welcome-web-app
+    spec:
+      containers:
+        - name: welcome-web-app
+          image: welcome-web:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
