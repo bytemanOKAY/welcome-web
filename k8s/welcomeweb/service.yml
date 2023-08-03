@@ -4,7 +4,7 @@ metadata:
   name: welcome-web-service
 spec:
   selector:
-    app: welcome-web
+    app: welcome-web-app
   ports:
     - port: 80
       targetPort: 8080

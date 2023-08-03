@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: welcome-web-app
 spec:
-  replicas: 1
+  replicas: 20
   selector:
     matchLabels:
       app: welcome-web-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: welcome-web-app
-          image: welcome-web:latest
+          image: welcomeweb:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
